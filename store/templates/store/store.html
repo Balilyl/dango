@@ -1,0 +1,41 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="d-flex justify-content-center"> Мир мебели</h1>
+    <div class="d-flex justify-content-center mb-4">
+        <div class=" border-bottom border-white border-4" style="width: 60px;"></div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a class="border border-3 rounded-2 btn btn-primary text-white w-40" href="/catalog">каталог мебели</a>
+    </div>
+    <div id="carouselExample" class="carousel slide mt-5">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/584.jpg' %}" class="d-block w-50 mx-auto"
+                     alt="img">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/57435d62a4b6bbc87520597c0e8c4c3a.jpg' %}" class="d-block w-50 mx-auto"
+                     alt="img">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/beautifully-decorated-interior-furnishings-111.jpg' %}" class="d-block w-50 mx-auto"
+                     alt="img">
+            </div>
+        </div>
+
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden invert-color">Next</span>
+        </button>
+        <div class="d-flex justify-content-center">
+            <a class="border border-3 rounded-2 btn btn-primary text-white w-40" href="/catalog">Узнать больше</a>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="d-flex justify-content-center mt-5">
+        <div class="border rounded-2 border-3 bg-primary w-50">
+            <h2 class="d-flex justify-content-center text-white">Вход</h2>
+            <div class="d-flex justify-content-center">
+                <form method="POST" class="w-75">
+                    {% csrf_token %}
+                    <div class="form-group ">
+                        <label for="loginInput">Логин</label>
+                        <div>{{ form.username }}</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginInputPassword">Пароль</label>
+                        <div>{{ form.password }}</div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4 mb-4">
+                        <button type="submit" class="btn btn-light">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
