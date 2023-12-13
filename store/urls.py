@@ -27,7 +27,7 @@ urlpatterns = [
                  'title': 'Авторизация',
                  'year': datetime.now().year,
              },
-             success_url='store/',
+             next_page="/",
          ),
          name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name="logout"),
